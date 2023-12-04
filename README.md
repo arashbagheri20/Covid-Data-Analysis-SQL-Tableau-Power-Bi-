@@ -153,14 +153,14 @@ Creating a Tableau and Power BI dashboard to Analyse COVID cases and deaths in t
               group by location, population
               
       4.4	Percentage of population infected by country and date
-      •	SQL Query used:
-          create view World_InfectedCases_n_PercentPopulationInfected_By_Country_n_Date as
-          select location, population, date, ISNULL(max(convert(int,total_cases)),0) as Highest_Infected_Cases, isnull(max(convert(int,total_cases)),0)/population*100 as Percentage_Population_Infected
-          from COVID_DATA..CovidDeaths
-          where continent is not null
-          group by location, population, date
-          create view World_InfectedCases_n_PercentPopulationInfected_By_Country_n_Date as
-          select location, population, date, ISNULL(max(convert(int,total_cases)),0) as Highest_Infected_Cases, isnull(max(convert(int,total_cases)),0)/population*100 as Percentage_Population_Infected
-          from COVID_DATA..CovidDeaths
-          where continent is not null
-          group by location, population, date
+          • SQL Query used:
+             create view World_InfectedCases_n_PercentPopulationInfected_By_Country_n_Date as
+             select location, population, date, ISNULL(max(convert(int,total_cases)),0) as Highest_Infected_Cases, isnull(max(convert(int,total_cases)),0)/population*100 as Percentage_Population_Infected
+             from COVID_DATA..CovidDeaths
+             where continent is not null
+             group by location, population, date
+             create view World_InfectedCases_n_PercentPopulationInfected_By_Country_n_Date as
+             select location, population, date, ISNULL(max(convert(int,total_cases)),0) as Highest_Infected_Cases, isnull(max(convert(int,total_cases)),0)/population*100 as Percentage_Population_Infected
+             from COVID_DATA..CovidDeaths
+             where continent is not null
+             group by location, population, date
